@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>tech.soit.flutter-intellij-ext</id>
+    <name>flutter-intellij-ext</name>
+    <vendor email="yangbinyhbn@gmail.com" url="github.com/boyan01">Boyan01</vendor>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Dart</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <localInspection
+                enabledByDefault="true"
+                language="Dart"
+                displayName="Dart I18N Warning"
+                implementationClass="tech.soit.flutter.idea.DartI18NInspection"/>
+
+        <completion.contributor language="yaml"
+                                implementationClass="tech.soit.flutter.idea.contributor.FlutterYamlCompletionContributor"/>
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
